@@ -6,7 +6,7 @@
 * HTML5
 * CSS3
 * JS - JQuery 
-* PHP 8
+* PHP 8 e Orientação a Objetos
 * SQL - MySQL
  
 # Descrição:
