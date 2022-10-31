@@ -1,0 +1,352 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+ol, ul, li {
+    list-style: none;
+} 
+
+a{
+    text-decoration: none;
+    color: black;
+}
+textarea:focus, input:focus, select:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+} 
+
+body{
+    background-color: rgb(241, 218, 188);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+   
+    background-color: antiquewhite;
+    padding: 15px;
+    color: rgb(32, 30, 30);
+    border-bottom: 2px solid white;
+    margin-bottom: 80px;
+}
+
+header > p {
+    text-transform: uppercase;
+    font-size: 50px;
+    color: bisque;
+    text-shadow: 1px 1px 1px  black;
+    font-style: italic;
+    cursor: pointer;
+}
+
+header > p > a  {
+    color: bisque;
+}
+
+header > ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header > ul > li {
+    margin: 10px;
+   
+    font-size: 18px;
+    padding: 10px;
+    height: 40px;
+    cursor: pointer;
+}
+
+header > ul > li:hover {
+    border-bottom: 1px solid white;
+}
+
+.aviso-diario {
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: whitesmoke;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 2px 2px red;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;   
+}
+
+.aviso-diario > p > span {
+    background-color: red;
+    padding: 5px;
+    color: antiquewhite;
+    margin-right: 10px;
+   
+}
+
+.agendamento-hoje, .agendamento-semana, .agendamento-restante {
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.agendamento-hoje > p, .agendamento-semana > p, .agendamento-restante > p {
+    padding: 20px;
+    background-color: red;
+    width: 100%;
+    color: white;
+}
+
+.agendamento-semana > p {
+    background-color: yellow;
+    color:rgb(32, 30, 30);
+}
+
+.agendamento-restante > p {
+    background-color: green;
+}
+
+table{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+thead, tr{
+    color: black;
+    text-transform: uppercase;
+    background-color: aliceblue;
+    
+}
+
+
+.horario-hoje{
+    background-color: red;
+    color: white;
+   
+}
+
+.horario-semana{
+    background-color: yellow;
+    color: black;
+   
+}
+
+.horario-restante{
+    background-color: green;
+    color: white;
+   
+}
+
+th, td{
+    padding: 10px;
+   
+}
+
+
+.criar-agendamento{
+    width: 40%;
+    margin: auto;
+}
+
+.editar-agendamento{
+    width: 40% ;
+    margin: auto;
+}
+
+.editar-agendamento > form > fieldset > legend {
+    background-color: rgb(251, 255, 1);
+   
+}
+
+
+
+
+input{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+
+}
+
+label{
+    display: block;
+    text-align: start;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type='submit'], .false-submit{
+    
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    margin-top: 15px;
+    box-shadow: 2px 2px black;
+    border-radius: 0px;
+    color: white;
+    border: 1px solid black;
+    text-transform: uppercase;
+}
+
+.false-submit{
+    background-color: green;
+    padding: 10px;
+}
+
+
+.editar-agendamento > form > fieldset > input[type='submit']{
+
+    background-color: rgb(251, 255, 1);
+    color: black;
+}
+
+.editar-agendamento > form > fieldset > legend {
+    color: black;
+}
+
+
+input[type='submit']:hover, .false-submit:hover{
+    border-radius: 20px;
+}
+
+fieldset{
+    margin-top: 0px;
+    padding: 20px;
+    text-align: center;
+    border-color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.842);
+    height: 800px;
+    border-radius: 20px;
+
+}
+
+legend{
+    text-transform: uppercase;
+    padding: 10px;
+    font-weight: bold;
+    background-color: green;
+    border: 1px solid black;
+    color: white;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+label.error{
+    color: red;
+    text-transform: initial;
+    margin: 0px;
+    padding: 0px;
+}
+
+input.error{
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+.sucesso, .sucesso-editar{
+    background-color: green;
+    padding: 20px;
+    border-radius: 50px;
+    width: 80%;
+    color: white;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px black;
+    text-transform: uppercase;
+}
+
+.sucesso-editar{
+    background-color: rgb(251, 255, 1);
+    color: black;
+    text-align: center;
+    width: 60%;
+}
+
+
+.todos-agendamentos{
+    margin: auto;
+  
+}
+
+.tabela-todos{
+    width: 80%;
+}
+
+.sem-agendamento{
+    background-color: #2ca3f4;
+    padding: 40px;
+    width: 50%;
+    border: 1px solid white;
+    margin: auto;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 25px;
+    box-shadow: 2px 2px black;
+    margin-bottom: 40PX;
+}
+
+
+.excluir-aviso{
+    width: 50%;
+    background-color: red;
+    padding: 40px;
+    color: white;
+    margin: auto;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.excluir-aviso > p {
+    margin-bottom: 50px;
+    font-size: 20px;
+}
+
+
+.excluir-aviso > form > input[type='submit'] {
+    padding: 14px;
+    background-color: red;
+    font-weight: bold;
+}
+
+.nome-data{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.aviso-2{
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+}
