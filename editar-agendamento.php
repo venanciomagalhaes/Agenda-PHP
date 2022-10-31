@@ -5,7 +5,6 @@ require_once "classes/EditarAgendamento.php";
 require_once "classes/ExibirAgendamento.php";
 date_default_timezone_set('America/Sao_Paulo');
 
-date_default_timezone_set('America/Sao_Paulo');
 
 $dataAtual = new DateTime();
 $dataAtual = $dataAtual->format('Y-m-d');
