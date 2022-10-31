@@ -19,7 +19,8 @@ SET time_zone = "+00:00";
 
 --
 -- Banco de dados: `loraagenda`
---
+
+CREATE DATABASE IF NOT EXISTS loraagenda;
 
 -- --------------------------------------------------------
 
