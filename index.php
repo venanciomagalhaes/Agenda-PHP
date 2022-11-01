@@ -68,7 +68,7 @@ $dataLimite = date("d/m", time() + (7 * 86400));
 
                         <tr>
                             <td><?= $agendamento['Nome'] ?></td>
-                            <td><?= $agendamento['Telefone'] ?></td>
+                            <td style="width: 155px ;"><?= $agendamento['Telefone'] ?></td>
                             <td class="horario-hoje"><?= $dataAtual ?></td>
                             <td class="horario-hoje"><?=  $agendamento['Horario']?></td>
                             <td><?= $agendamento['Servico'] ?></td>
@@ -98,7 +98,7 @@ $dataLimite = date("d/m", time() + (7 * 86400));
                         <th>Cliente</th>
                         <th>Telefone</th>
                         <th>Data</th>
-                        <th>Horáro</th>
+                        <th>Horário</th>
                         <th>Serviço</th>
                     </thead>
 
@@ -111,7 +111,7 @@ $dataLimite = date("d/m", time() + (7 * 86400));
 
                             <tr>
                                 <td><?= $agendamento['Nome'] ?></td>
-                                <td><?= $agendamento['Telefone'] ?></td>
+                                <td style="width: 155px ;"><?= $agendamento['Telefone'] ?></td>
                                 <td class="horario-semana"><?= $dataAgendamento ?></td>
                                 <td class="horario-semana"><?= $agendamento['Horario'] ?></td>
                                 <td><?= $agendamento['Servico'] ?></td>

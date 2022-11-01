@@ -85,7 +85,7 @@ if (isset($_GET['excluir'])) {
 
                     <tr>
                         <td><?= $agendamento['Nome'] ?></td>
-                        <td><?= $agendamento['Telefone'] ?></td>
+                        <td style="width: 155px ;" ><?= $agendamento['Telefone'] ?></td>
                         <td class="<?= classe($agendamento['Data'])  ?>"><?= $dataAgendamento->format('d/m/Y'); ?></td>
                         <td class="<?= classe($agendamento['Data']) ?>"><?= $agendamento['Horario'] ?></td>
                         <td style="text-align: justify ;"><?= $agendamento['Servico'] ?></td>

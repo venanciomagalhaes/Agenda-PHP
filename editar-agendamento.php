@@ -24,9 +24,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = $_POST['data'];
     $horario = $_POST['horario'];
     $servico = $_POST['servico'];
+    
 
     $editarAgendamento = new EditarAgendamento();
     $editarAgendamento->editar($id, $nome,  $telefone, $data, $horario, $servico);
+
+    
 
     header('Location: todos-agendamentos.php?agendamento=true');
 }

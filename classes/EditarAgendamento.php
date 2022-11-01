@@ -14,7 +14,7 @@ class EditarAgendamento
 
         try {
 
-            $this->conexao->mysql->exec("UPDATE loraagenda.agendamentos SET Nome = '{$nome}', Telefone = '{$telefone}' Data = '{$data}', Horario = '{$horario}', Servico = '{$servico}' WHERE Id = {$id}");
+            $this->conexao->mysql->exec("UPDATE loraagenda.agendamentos SET Nome = '{$nome}', Telefone = '{$telefone}',  Data = '{$data}', Horario = '{$horario}', Servico = '{$servico}' WHERE Id = {$id}");
            
 
         } catch (PDOException $error) {
