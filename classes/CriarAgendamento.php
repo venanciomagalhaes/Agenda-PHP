@@ -16,7 +16,7 @@ class CriarAgendamento
        try{
 
         $this->conexao->mysql->exec("Use loraagenda");
-        $this->conexao->mysql->query("INSERT INTO agendamentos(Nome,Telefone, Data, Horario, Servico)VALUES ('{$nome}','{$telefone}','{$data}','{$horario}','{$servico}')");
+        $this->conexao->mysql->query("INSERT INTO agendamentos(Nome,Telefone, Data, Horario, Servico, Excluido)VALUES ('{$nome}','{$telefone}','{$data}','{$horario}','{$servico}', 0)");
 
        
 

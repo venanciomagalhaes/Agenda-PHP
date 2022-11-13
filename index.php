@@ -29,18 +29,10 @@ $dataLimite = date("d/m", time() + (7 * 86400));
 
 <body>
 
-    <header>
-        <p><a href="index.php">Lora Noivas</a></p>
-
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="criar-agendamento.php">Criar agendamento</a> </li>
-            <li><a href="todos-agendamentos.php">Todos os agendamentos</a></li>
-
-        </ul>
-    </header>
+    
 
     <?php
+    require "assets/templates/header.php";
     if (!empty($agendamentos)) { ?>
 
         <section class="agendamento-hoje">
@@ -68,10 +60,10 @@ $dataLimite = date("d/m", time() + (7 * 86400));
 
                         <tr>
                             <td><?= $agendamento['Nome'] ?></td>
-                            <td style="width: 155px ;"><?= $agendamento['Telefone'] ?></td>
+                            <td style="width:155px"><?= $agendamento['Telefone'] ?></td>
                             <td class="horario-hoje"><?= $dataAtual ?></td>
                             <td class="horario-hoje"><?=  $agendamento['Horario']?></td>
-                            <td><?= $agendamento['Servico'] ?></td>
+                            <td style="text-align: justify ;"><?= nl2br( $agendamento['Servico']) ?></td>
                             <td><a href="excluir-agendamento.php?id=<?= $agendamento['Id'] ?>"><i style="color: red; font-size: 20px; cursor: pointer" class="fa-solid fa-trash-can"></i></a>
                         </tr>
 
@@ -111,10 +103,10 @@ $dataLimite = date("d/m", time() + (7 * 86400));
 
                             <tr>
                                 <td><?= $agendamento['Nome'] ?></td>
-                                <td style="width: 155px ;"><?= $agendamento['Telefone'] ?></td>
+                                <td style="width:155px"><?= $agendamento['Telefone'] ?></td>
                                 <td class="horario-semana"><?= $dataAgendamento ?></td>
                                 <td class="horario-semana"><?= $agendamento['Horario'] ?></td>
-                                <td><?= $agendamento['Servico'] ?></td>
+                                <td style="text-align: justify ;"><?= nl2br( $agendamento['Servico']) ?></td>
 
                             </tr>
                         <?php } ?>

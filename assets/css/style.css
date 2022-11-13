@@ -90,7 +90,7 @@ header > ul > li:hover {
 
 .agendamento-hoje, .agendamento-semana, .agendamento-restante {
     text-align: center;
-    text-transform: uppercase;
+   
     width: 90%;
     margin: auto;
     margin-bottom: 50px;
@@ -122,9 +122,13 @@ table{
 
 thead, tr{
     color: black;
-    text-transform: uppercase;
     background-color: aliceblue;
     
+}
+
+
+thead{
+    text-transform: uppercase;
 }
 
 
@@ -144,6 +148,11 @@ thead, tr{
     background-color: green;
     color: white;
    
+}
+
+.horario-vencido{
+    color: white;
+    background-color: black;
 }
 
 th, td{
@@ -262,7 +271,7 @@ label.error{
 }
 
 input.error{
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     border: 1px solid black;
 }
@@ -314,7 +323,8 @@ input.error{
 
 
 .excluir-aviso{
-    width: 50%;
+    min-width: 50%;
+    max-width: 70%;
     background-color: red;
     padding: 40px;
     color: white;
@@ -325,7 +335,7 @@ input.error{
 
 .excluir-aviso > p {
     margin-bottom: 50px;
-    font-size: 20px;
+    font-size:1em;
 }
 
 

@@ -14,8 +14,8 @@ class EditarAgendamento
 
         try {
 
-            $this->conexao->mysql->exec("UPDATE loraagenda.agendamentos SET Nome = '{$nome}', Telefone = '{$telefone}',  Data = '{$data}', Horario = '{$horario}', Servico = '{$servico}' WHERE Id = {$id}");
-           
+            $this->conexao->mysql->exec("UPDATE loraagenda.agendamentos SET Nome = '{$nome}', Telefone = '{$telefone}', Data = '{$data}', Horario = '{$horario}', Servico = '{$servico}' WHERE agendamentos.Id = {$id}");
+
 
         } catch (PDOException $error) {
             echo "Não foi possível editar o registro";

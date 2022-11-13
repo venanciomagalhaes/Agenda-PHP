@@ -5,6 +5,6 @@
         <li><a href="index.php">Home</a></li>
         <li><a  href="criar-agendamento.php">Criar agendamento</a> </li>
         <li><a href="todos-agendamentos.php">Todos os agendamentos</a></li>
-
+        <li><a href="historico-agendamentos.php">Histórico</a></li>
     </ul>
 </header>

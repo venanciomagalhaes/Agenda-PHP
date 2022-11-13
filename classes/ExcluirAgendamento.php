@@ -13,7 +13,7 @@ class ExcluirAgendamento
     {
         try {
             
-            $this->conexao->mysql->exec("DELETE FROM loraagenda.agendamentos WHERE id = {$id}");
+            $this->conexao->mysql->exec("UPDATE loraagenda.agendamentos SET Excluido = true WHERE id = {$id}");
 
         } catch (PDOException $error) {
             echo "Não foi possível excluir o registro";

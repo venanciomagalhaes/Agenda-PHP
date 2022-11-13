@@ -20,10 +20,12 @@ function classe($data)
 
     if ($data == $dataAtual) {
         return 'horario-hoje';
-    } else if ($data <= $dataLimite) {
+    } else if ($data <= $dataLimite && !($data < $dataAtual)) {
         return 'horario-semana';
-    } else {
+    } else if ($data > $dataLimite) {
         return 'horario-restante';
+    } else {
+        return 'horario-vencido';
     }
 }
 
@@ -85,10 +87,10 @@ if (isset($_GET['excluir'])) {
 
                     <tr>
                         <td><?= $agendamento['Nome'] ?></td>
-                        <td style="width: 155px ;" ><?= $agendamento['Telefone'] ?></td>
+                        <td style="width:155px"><?= $agendamento['Telefone'] ?></td>
                         <td class="<?= classe($agendamento['Data'])  ?>"><?= $dataAgendamento->format('d/m/Y'); ?></td>
                         <td class="<?= classe($agendamento['Data']) ?>"><?= $agendamento['Horario'] ?></td>
-                        <td style="text-align: justify ;"><?= $agendamento['Servico'] ?></td>
+                        <td style="text-align: justify ;"><?= nl2br( $agendamento['Servico']) ?></td>
                         <td><a href='editar-agendamento.php?id=<?= $agendamento['Id']  ?>'><i style="color: blue; font-size: 20px; cursor: pointer" class="fa-regular fa-pen-to-square"></i> </a></td>
                         <td><a href="excluir-agendamento.php?id=<?= $agendamento['Id'] ?>"><i style="color: red; font-size: 20px; cursor: pointer" class="fa-solid fa-trash-can"></i></a></td>
                     </tr>

@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['agendamento'])) {
     <script src="assets/js/jquery-3.6.1.js"></script>
     <script src="assets/js/jquery.validate.js"></script>
     <script src="assets/js/jquery.mask.js"></script>
-    <script src="assets/js//personalizado.js"></script>
+    <script src="assets/js/personalizado.js"></script>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 31-Out-2022 às 02:30
+-- Tempo de geração: 13-Nov-2022 às 01:27
 -- Versão do servidor: 10.4.25-MariaDB
 -- versão do PHP: 8.1.10
 
@@ -19,8 +19,10 @@ SET time_zone = "+00:00";
 
 --
 -- Banco de dados: `loraagenda`
+--
 
 CREATE DATABASE IF NOT EXISTS loraagenda;
+USE loraagenda;
 
 -- --------------------------------------------------------
 
@@ -34,8 +36,14 @@ CREATE TABLE `agendamentos` (
   `Telefone` varchar(20) NOT NULL,
   `Data` date NOT NULL,
   `Horario` time NOT NULL,
-  `Servico` text NOT NULL
+  `Servico` text NOT NULL,
+  `Excluido` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `agendamentos`
+--
+
 
 --
 -- Índices para tabelas despejadas
@@ -55,7 +63,7 @@ ALTER TABLE `agendamentos`
 -- AUTO_INCREMENT de tabela `agendamentos`
 --
 ALTER TABLE `agendamentos`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

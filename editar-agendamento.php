@@ -24,12 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = $_POST['data'];
     $horario = $_POST['horario'];
     $servico = $_POST['servico'];
-    
+
 
     $editarAgendamento = new EditarAgendamento();
     $editarAgendamento->editar($id, $nome,  $telefone, $data, $horario, $servico);
-
-    
 
     header('Location: todos-agendamentos.php?agendamento=true');
 }
@@ -71,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <input type="text" name="nome-cliente" id="nome-cliente" placeholder="Nome da Cliente" value="<?php echo $agendamento['Nome'] ?>">
 
                         <label for="telefone">Telefone </label>
-                        <input type="tel" name="telefone" id="telefone" value="<?php echo $agendamento['Telefone'] ?>">
+                        <input  type="tel" name="telefone" id="telefone" value="<?php echo $agendamento['Telefone'] ?>">
 
                         <label for="data">Data</label>
                         <input type="date" name="data" min="<?= $dataAtual ?>" id="data" value="<?php echo $agendamento['Data'] ?>">
@@ -79,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <label for="horario">Horário</label>
                         <input type="time" name="horario" id="horario" value="<?php echo $agendamento['Horario'] ?>">
 
-                        <label for="servico">Serviço</label>
+                        <label for="servico">Servico</label>
                         <textarea name="servico" id="servico" cols="" rows=""> <?php echo $agendamento['Servico'] ?></textarea>
 
                     <?php } ?>
